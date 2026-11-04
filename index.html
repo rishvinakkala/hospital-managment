@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Hospital Management System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-indigo-900 text-white hidden md:flex flex-col justify-between">
+            <div>
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 px-6 py-5 border-b border-indigo-800">
+                    <i class="fa-solid fa-hospital-user text-2xl text-indigo-400"></i>
+                    <span class="text-xl font-bold tracking-wide">MediCare HMS</span>
+                </div>
+                <!-- Navigation Links -->
+                <nav class="mt-6 px-4 space-y-1">
+                    <a href="#" class="nav-link active">
+                        <i class="fa-solid fa-chart-pie w-5"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-user-injured w-5"></i>
+                        <span>Patients</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-user-doctor w-5"></i>
+                        <span>Doctors</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-calendar-check w-5"></i>
+                        <span>Appointments</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-pills w-5"></i>
+                        <span>Pharmacy</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-gear w-5"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- User Profile Footer -->
+            <div class="p-4 border-t border-indigo-800 flex items-center space-x-3">
+                <img class="w-10 h-10 rounded-full border border-indigo-400" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=100&q=80" alt="Admin">
+                <div>
+                    <h4 class="text-sm font-semibold">Dr. Sarah Jenkins</h4>
+                    <p class="text-xs text-indigo-300">Administrator</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col overflow-y-auto">
+            <!-- Top Navigation Header -->
+            <header class="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                    <h1 class="text-xl font-bold text-gray-800">Hospital Overview</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <i class="fa-solid fa-search text-gray-400"></i>
+                        </span>
+                        <input type="text" placeholder="Search patients, doctors..." class="pl-10 pr-4 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <button class="relative text-gray-600 hover:text-indigo-600">
+                        <i class="fa-regular fa-bell text-xl"></i>
+                        <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <main class="p-6 space-y-6">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="stat-card">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-user-injured"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Total Patients</p>
+                            <h3 class="text-2xl font-bold text-gray-800">1,248</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Active Doctors</p>
+                            <h3 class="text-2xl font-bold text-gray-800">86</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Appointments Today</p>
+                            <h3 class="text-2xl font-bold text-gray-800">42</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-bed-pulse"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Available Beds</p>
+                            <h3 class="text-2xl font-bold text-gray-800">24</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Appointments Table Section -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800">Recent Appointments</h3>
+                        <button class="bg-indigo-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-indigo-700 transition">
+                            <i class="fa-solid fa-plus mr-2"></i>New Appointment
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Patient Name</th>
+                                    <th>Doctor</th>
+                                    <th>Department</th>
+                                    <th>Date & Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows will be dynamically rendered via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
