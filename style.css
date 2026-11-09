@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f4f7fb;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #123b63;
+    color: white;
+    padding: 25px 15px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: #2875b9;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 25px;
+    width: calc(100% - 240px);
+}
+
+header {
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.page h2 {
+    margin-bottom: 20px;
+    color: #123b63;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 180px;
+    box-shadow: 0 2px 10px #00000010;
+}
+
+.card h3 {
+    color: #555;
+}
+
+.card p {
+    font-size: 30px;
+    color: #2875b9;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    margin: 8px 5px 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #2875b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #123b63;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    background: white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #123b63;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 150px;
+        width: calc(100% - 150px);
+        padding: 12px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+}
